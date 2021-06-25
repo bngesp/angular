@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+// @ts-ignore
+import {Personne} from '../../classe/personne';
 
 @Component({
   selector: 'app-item',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
+  @Input() personne?: Personne;
 
-  personne = {
-    nom: 'diouf', prenom: 'bass', sexe: 'M', age: 19
-  };
+  // personne = {
+  //   nom: 'diouf',
+  //   prenom: 'bass',
+  //   sexe: 'M',
+  //   age: 19,
+  //   notes: [10, 14, 9, 19]
+  // };
   constructor() { }
 
   ngOnInit(): void {
@@ -17,18 +24,20 @@ export class ItemComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   changerSexeToM() {
-    this.personne.sexe = 'M';
+    // @ts-ignore
+    this.personne?.sexe = 'M';
     console.log(this.personne);
   }
   // tslint:disable-next-line:typedef
   changerSexeToF() {
-    this.personne.sexe = 'F';
+    // @ts-ignore
+    this.personne?.sexe = 'F';
     console.log(this.personne);
   }
 
   // tslint:disable-next-line:typedef
   getColor(){
-    if (this.personne.sexe === 'f') {
+    if (this.personne?.sexe === 'f') {
       return '{color: "red"}';
     }
     else {

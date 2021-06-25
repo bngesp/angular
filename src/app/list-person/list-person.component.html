@@ -1,8 +1,5 @@
 <ul class="list-group">
-  <app-item></app-item>
-  <app-item></app-item>
-  <app-item></app-item>
-  <app-item></app-item>
-  <app-item></app-item>
-  <app-item></app-item>
+  <ng-container *ngFor="let p of personnes">
+    <app-item [personne]="p"></app-item>
+  </ng-container>
 </ul>

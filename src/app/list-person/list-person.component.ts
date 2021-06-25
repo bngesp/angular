@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// @ts-ignore
+import {Personne} from '../classe/personne';
 
 @Component({
   selector: 'app-list-person',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPersonComponent implements OnInit {
 
+  personnes = [
+    new Personne('Ndiaye', 'Modou', 17, 'M', [9, 14, 15, 8]),
+    new Personne('Diop', 'Anta', 18, 'F', [19, 10, 1, 8]),
+    new Personne('Dieng', 'Fallou', 20, 'M', [19, 10, 1, 8]),
+    new Personne('Samb', 'Ousmane', 8, 'M', [19, 10, 1, 8]),
+    new Personne('Fall', 'Coumba', 28, 'F', [19, 10, 1, 8]),
+  ];
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.personnes);
   }
 
 }
