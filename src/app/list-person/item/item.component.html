@@ -5,6 +5,8 @@
       'list-group-item-primary': personne.sexe == 'F'
       }">
   je suis {{personne.prenom + ' ' + personne.nom}}
+  <span *ngIf="personne.age < 18"> Mineur</span>
+  <span *ngIf="personne.age >= 18"> Majeur</span>
   <div class="pull-right">
     <button class="btn btn-primary"
             [disabled]="personne.sexe == 'M'" (click)="changerSexeToM()">M</button>
@@ -13,4 +15,5 @@
   </div>
   <div *ngIf="personne.sexe == 'M'"> je suis un Mal</div>
   <div *ngIf="personne.sexe == 'F'"> je suis une Femele</div>
+  <input type="number" min="0" max="100" [(ngModel)]="personne.age">
 </li>

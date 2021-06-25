@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ItemComponent implements OnInit {
 
   personne = {
-    nom: 'diouf', prenom: 'bass', sexe: 'M', age: 10
+    nom: 'diouf', prenom: 'bass', sexe: 'M', age: 19
   };
   constructor() { }
 
