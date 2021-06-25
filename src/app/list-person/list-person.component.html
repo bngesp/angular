@@ -3,3 +3,13 @@
     <app-item [personne]="p"></app-item>
   </ng-container>
 </ul>
+
+<div class="form-group">
+  <button
+    class="btn btn-primary"
+    (click) = "changerSexe('M')"
+  >change to M</button>
+  <button class="btn btn-danger"
+          (click) = "changerSexe('F')"
+  >change to F</button>
+</div>

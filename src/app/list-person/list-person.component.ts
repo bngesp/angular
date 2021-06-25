@@ -22,4 +22,12 @@ export class ListPersonComponent implements OnInit {
     console.log(this.personnes);
   }
 
+  changerSexe(sex: string){
+    let person: Personne[] = [] ;
+    this.personnes.forEach(p => {
+      p.sexe = sex;
+      person.push(p);
+    } );
+    this.personnes = person;
+  }
 }
