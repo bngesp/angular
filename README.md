@@ -1,27 +1,29 @@
-# Angular
+# TODO
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+## Preparer le terrain pour les Services
 
-## Development server
+1. Creer une Class QcmService qui dispose d'un objet `qcms` representant la liste des qcms
+2. Dans la class QcmService :
+    => Creer une methode `initQcm()` qui permet de charger par defaut une liste de qcm
+    => Creer une methode `add(q: Qcm)` qui prend en entre un Qcm et qui le supprime au niveau de la liste
+    => Creer une methode `deleteQcm(id: number)` qui prend en entree un id et supprimme dans le tableau l'element avec l'id correspondant
+    => Creer une methode `dupliquerQcm(id: number)` qui permet de dupliquer un element dans le tableau
+    => Creer une methode `rechercheQuestion(el: string)` qui permet de rechercher dans toutes les questions du qcm
+    => Creer une methode `plusGrande()` qui permet de retourner le qcm avec la plus grande note
+    => Creer une methode `moyenneQCM(e)` qui permet de retourner la notes moyenne
+   
+## Utilisation de la base de donnees distance
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Creer une base de donnees `tp_angular`
+2. Creer la table `qcm` avec la structure suivance : 
+ ```
+{
+    id: int, question: varchar(255), reponse: varchar(255), note: int
+}
+```
+3. Faire quelques insertions
+4. Creer un fichier donnees.php permettant de se connecter à la base de donnees afin de recuperer les donnees
+ 
 
-## Code scaffolding
+## Creation d'une API RestFull
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

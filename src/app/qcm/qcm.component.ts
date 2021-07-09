@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {Qcm} from './qcm';
+import {QcmService} from '../qcm.service';
 
 @Component({
   selector: 'app-qcm',
@@ -9,18 +10,13 @@ import {Qcm} from './qcm';
 })
 export class QcmComponent implements OnInit {
   qcms: Qcm[] = [];
-
   constructor(
-    private router: Router
+    private router: Router,
+    private qcmservice: QcmService
   ) { }
 
   ngOnInit(): void {
-    this.qcms = [
-      new Qcm(0, 'qui est l\'actuel president du senegal ?', 'macky sall', 10),
-      new Qcm(1, 'capitale du senegal ?', 'dakar', 10),
-      new Qcm(2, 'quelle est la devise du senegal?', 'un peuple un but', 10),
-      new Qcm(3, 'qui est l\'actuel president du senegal ?', 'macky sall', 10),
-    ];
+    this.qcms = this.qcmservice.qcms;
   }
 
   // tslint:disable-next-line:typedef
