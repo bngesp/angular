@@ -10,6 +10,9 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { NosServicesComponent } from './nos-services/nos-services.component';
 import { APproposComponent } from './a-ppropos/a-ppropos.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { QcmComponent } from './qcm/qcm.component';
+import { EditQcmComponent } from './qcm/edit-qcm/edit-qcm.component';
+import { AddQcmComponent } from './qcm/add-qcm/add-qcm.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ContactsComponent } from './contacts/contacts.component';
     AccueilComponent,
     NosServicesComponent,
     APproposComponent,
-    ContactsComponent
+    ContactsComponent,
+    QcmComponent,
+    EditQcmComponent,
+    AddQcmComponent
   ],
     imports: [
         BrowserModule,

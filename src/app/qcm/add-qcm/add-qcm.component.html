@@ -1,0 +1,35 @@
+<h3>Page d'ajout QCM</h3>
+
+<div class="row">
+  <form>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Id</label>
+      <div class="col-sm-10">
+        <input type="number" min="0" class="form-control" id="id" placeholder="Id" name="id">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Question</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="question" placeholder="question" name="question">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Reponse</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="response" placeholder="reponse" name="reponse">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Note</label>
+      <div class="col-sm-10">
+        <input type="number" min="0" max="20" class="form-control" id="note" placeholder="note" name="note">
+      </div>
+    </div>
+    <div class="form-group">
+
+      <button class="btn btn-primary" (click)="retourToQcm()">Retour</button>
+      <button class="btn btn-success">Ajouter</button>
+    </div>
+  </form>
+</div>
