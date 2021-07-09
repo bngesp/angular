@@ -1,21 +1,18 @@
 
-<li [ngClass]="{
-      'list-group-item': true,
-      'list-group-item-danger': personne?.sexe == 'M',
-      'list-group-item-primary': personne?.sexe == 'F'
-      }">
-  je suis {{personne?.prenom + ' ' + personne?.nom}}
-  <span *ngIf="personne?.age < 18"> Mineur</span>
-  <span *ngIf="personne?.age >= 18"> Majeur</span>
-  <div class="pull-right">
-    <button class="btn btn-primary"
-            [disabled]="personne?.sexe == 'M'" (click)="changerSexeToM()">M</button>
-    <button class="btn btn-danger"
-            [disabled]="personne?.sexe == 'F'" (click)="changerSexeToF()">F</button>
-  </div>
-  <div *ngIf="personne?.sexe == 'M'"> je suis un Mal</div>
-  <div *ngIf="personne?.sexe == 'F'"> je suis une Femele</div>
-  <br>
-  notes : <span *ngFor="let n of personne?.notes">{{n}},</span><br>
-  <br>
-</li>
+<!--<li [ngClass]="{-->
+<!--      'list-group-item': true,-->
+<!--      'list-group-item-danger': personne?.sexe == 'M',-->
+<!--      'list-group-item-primary': personne?.sexe == 'F'-->
+<!--      }">-->
+<!--  je suis {{personne?.prenom + ' ' + personne?.nom}}-->
+<!--  <div class="pull-right">-->
+<!--    <button class="btn btn-primary"-->
+<!--            [disabled]="personne?.sexe == 'M'" (click)="changerSexeToM()">M</button>-->
+<!--    <button class="btn btn-danger"-->
+<!--            [disabled]="personne?.sexe == 'F'" (click)="changerSexeToF()">F</button>-->
+<!--  </div>-->
+<!--  <div *ngIf="personne?.sexe == 'M'"> je suis un Mal</div>-->
+<!--  <div *ngIf="personne?.sexe == 'F'"> je suis une Femele</div>-->
+<!--  <br>-->
+<!--  <br>-->
+<!--</li>-->

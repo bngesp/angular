@@ -6,12 +6,20 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { ListPersonComponent } from './list-person/list-person.component';
 import { ItemComponent } from './list-person/item/item.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { NosServicesComponent } from './nos-services/nos-services.component';
+import { APproposComponent } from './a-ppropos/a-ppropos.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListPersonComponent,
-    ItemComponent
+    ItemComponent,
+    AccueilComponent,
+    NosServicesComponent,
+    APproposComponent,
+    ContactsComponent
   ],
     imports: [
         BrowserModule,

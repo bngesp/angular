@@ -1,4 +1,33 @@
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Mon Site Web</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="accueil" routerLinkActive="active">Accueil </a>
+      <a class="nav-item nav-link" routerLink="contacts"  routerLinkActive="active">Contacts</a>
+      <a class="nav-item nav-link" routerLink="nos-services"  routerLinkActive="active">Nos Service</a>
+      <a class="nav-item nav-link" routerLink="a-propos"  routerLinkActive="active">A propos</a>
+      <a class="nav-item nav-link" routerLink="personnes"  routerLinkActive="active">Liste Personnes</a>
+    </div>
+  </div>
+</nav>
+
 <h1>Je suis App component</h1>
 <div class="container">
-    <app-list-person></app-list-person>
+<!--   <app-list-person></app-list-person>-->
+<!--  <app-accueil></app-accueil>-->
+<!--  <app-nos-services></app-nos-services>-->
+<!--  <app-a-ppropos></app-a-ppropos>-->
+<!--  <app-contacts></app-contacts>-->
+<!--
+  Crrer un menu
+    Accueil
+    apropos
+    nos-service
+    contacts
+    personnes
+-->
+  <router-outlet></router-outlet>
 </div>
