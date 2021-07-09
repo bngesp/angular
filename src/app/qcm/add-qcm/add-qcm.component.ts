@@ -7,16 +7,16 @@ import {Router} from '@angular/router';
   styleUrls: ['./add-qcm.component.css']
 })
 export class AddQcmComponent implements OnInit {
-
   constructor(
     private router: Router
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   // tslint:disable-next-line:typedef
   retourToQcm() {
     this.router.navigate(['qcm']);
   }
+
+
 }
