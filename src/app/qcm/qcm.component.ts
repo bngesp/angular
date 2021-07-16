@@ -17,6 +17,10 @@ export class QcmComponent implements OnInit {
 
   ngOnInit(): void {
     this.qcms = this.qcmservice.qcms;
+    this.qcmservice.getQcmFromServer().subscribe(
+      (data) => console.log(data),
+      (err) => console.error(err)
+    );
   }
 
   // tslint:disable-next-line:typedef

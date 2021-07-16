@@ -13,6 +13,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { QcmComponent } from './qcm/qcm.component';
 import { EditQcmComponent } from './qcm/edit-qcm/edit-qcm.component';
 import { AddQcmComponent } from './qcm/add-qcm/add-qcm.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddQcmComponent } from './qcm/add-qcm/add-qcm.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]
